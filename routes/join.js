@@ -12,6 +12,7 @@ const Signup = require("../middleware/Signup");
  * 		"password": "random_password"
  * }
  * 
+ * accesstoken will be obtained, and must be integrated as a bearer token auth header
  * 
  */
 router.post(
