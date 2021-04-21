@@ -1,0 +1,17 @@
+GET http://localhost:6969/profile/nidhi
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiJ9.TWFkaGF2.3WKIvJHsN0ZsEOGYUIMW7i2PpgZiuTm8uKiWn5RAu5M
+
+ {
+  "id": "60781b5369d7ec173bf6edfb"
+ }
+
+// note: do not add a comma after the last json entry
+// its not gonna end well...
+
+
+// change type to log_in to login in /join
+// change type to sign_up to signup in /join
+
+// accesstoken (Madhav) : eyJhbGciOiJIUzI1NiJ9.TWFkaGF2.3WKIvJHsN0ZsEOGYUIMW7i2PpgZiuTm8uKiWn5RAu5M
+// accesstoken (Madhav1) : eyJhbGciOiJIUzI1NiJ9.TWFkaGF2MQ.Qmihcnp0bb0wQaQZBwmHBfLBDv20HzOK7f-2zoeQw_E

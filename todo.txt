@@ -1,0 +1,4 @@
+1. logout functionality
+2. jwt cookie thingy
+3. try-catch functionality completing
+4. frontend -> react project
