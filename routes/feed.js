@@ -3,7 +3,10 @@ const AuthenticateUser = require("../middleware/AuthenticateUser");
 const AuthenticateObject = require("../middleware/AuthenticateObject");
 const ReturnObjects = require("../middleware/ReturnObjects");
 
-	// feed only for ppl who logged in
+	/* feed only for ppl who logged in
+	   link: http:localhost:6969/feed
+	    *
+	    */
 router.get(
 	"/", 
 	AuthenticateUser,	// user authentication
@@ -11,6 +14,8 @@ router.get(
 );
 
 /* to submit an object to auction
+ * link: http:localhost:6969/feed/add
+ *
  * body structure: 
  * {
  * 		"description": "random_description",

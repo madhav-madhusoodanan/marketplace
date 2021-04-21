@@ -2,7 +2,10 @@ const router = require("express").Router();
 const AuthenticateUser = require("../middleware/AuthenticateUser");
 const UpdateUser = require("../middleware/UpdateUser");
 const ObtainUser = require("../middleware/ObtainUser");
+
 /* to edit profile
+ * link: http:localhost:6969/profile/:name
+ *
  * entries are optional, but are restricted to bio, password and money
  * body structure (for everyone, to edit their own profile only): 
  * {
@@ -30,7 +33,11 @@ router.post(
 	ObtainUser 			// displays the user's data
 );
 
-/* to get profile*/
+/* to get profile
+ * link: http:localhost:6969/profile/:name
+ *
+ * 
+*/
 router.get(
 	"/:name", 
 	AuthenticateUser, 	// user autentication

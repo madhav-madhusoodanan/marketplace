@@ -4,6 +4,10 @@ const AuthenticateBid = require("../middleware/AuthenticateBid");
 const AuthenticateUser = require("../middleware/AuthenticateUser");
 const ReturnObjects = require("../middleware/ReturnObjects");
 
+/* to get the specified object
+   link: http:localhost:6969/feed/:id
+   *
+   */
 router.get(
 	"/:id", 
 	ObtainObject,			// obtain the object from database
@@ -11,6 +15,8 @@ router.get(
 );
 
 /* handles bids being submitted by bidders or bid being selected by seller
+ * link: http:localhost:6969/feed/:id
+ *
  * body structure (to bid, for bidders): 
  * {
  * 		"money": 150

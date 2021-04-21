@@ -1,7 +1,11 @@
 const router = require("express").Router();
 const Login = require("../middleware/Login");
 const Signup = require("../middleware/Signup");
-/* here, body must have name, password and type
+/* both login and signp are handled here 
+ *
+ * here, body must have name, password and type
+ * link: http:localhost:6969/join
+ * 
  * body structure: 
  * {
  * 		"name": "random_name",
