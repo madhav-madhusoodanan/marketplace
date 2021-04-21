@@ -12,8 +12,15 @@ app.use(express.json());
  * 2. profile page
  * 3. marketplace page
  * 4. bidding page // with an extra section for the seller to choose bids
- * 5. admins page (list of users and respective activity)
  * 6. if possible, intro page too
+ * 
+ *
+ * for all the routes except the "join" route,
+ * request header of ->
+ * authorization : BEARER <accesstoken> 
+ * 
+ * must be used
+ * accesstoken can be obtained from the join page
  */
 app.get("/", (req, res) => {
   res.send("hello!");
@@ -22,7 +29,6 @@ app.use("/join", require("./routes/join.js"));
 app.use("/profile", require("./routes/profile"));
 app.use("/feed", require("./routes/feed"));
 app.use("/feed", require("./routes/bidding"));
-// app.use('/admins', require('./routes/admins'));
 
 mongoose
   .connect(process.env.CONNECTION_URL, {
