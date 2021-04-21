@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const Users = require("../models/user");
 const UpdateUser = async (req, res) => {
 	const { name } = req.params;
-	if(req.body && req.body.password === process.env.ADMIN)
+	if(req.body && req.body.admin_password === process.env.ADMIN)
 	{
 		// admin access to shadow ban a user
 		try
