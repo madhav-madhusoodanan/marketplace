@@ -10,7 +10,19 @@ router.get(
 	ReturnObjects 			// send it to the person who asked
 );
 
-	// random person posts a bid or seller selects bid
+/* handles bids being submitted by bidders or bid being selected by seller
+ * body structure (to bid, for bidders): 
+ * {
+ * 		"money": 150
+ * }
+ * 
+ * body structure (to choose the bid, for seller): 
+ * {
+ * 		"id": "the_bid_id_of_the_choosen_bid"
+ * }
+ * 
+ * 
+ */
 router.post(
 	"/:id",
 	AuthenticateUser, 		// user authentication

@@ -13,10 +13,6 @@ const Users = new mongoose.Schema({
     type: String,
     default: ".",
   },
-  img: {
-    data: Buffer,
-    contentType: String,
-  },
   money: {
     type: Number,
     default: 1000,

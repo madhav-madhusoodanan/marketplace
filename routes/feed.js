@@ -10,7 +10,15 @@ router.get(
 	ReturnObjects 		// display all the objects
 );
 
-	// only for adding an object
+/* to submit an object to auction
+ * body structure: 
+ * {
+ * 		"description": "random_description",
+ * 		"cost": 10
+ * }
+ * 
+ * 
+ */
 router.post(
 	"/add",
 	AuthenticateUser, 	// user authentication
