@@ -3,20 +3,19 @@ const AuthenticateUser = require("../middleware/AuthenticateUser");
 const AuthenticateObject = require("../middleware/AuthenticateObject");
 const ReturnObjects = require("../middleware/ReturnObjects");
 
-// feed only for ppl who logged in
+	// feed only for ppl who logged in
 router.get(
 	"/", 
-	AuthenticateUser, 
-	ReturnObjects
+	AuthenticateUser,	// user authentication
+	ReturnObjects 		// display all the objects
 );
-// missing queries, implement it ASAP
 
-// only for adding an object
+	// only for adding an object
 router.post(
 	"/add",
-	AuthenticateUser,
-	AuthenticateObject,
-	ReturnObjects
+	AuthenticateUser, 	// user authentication
+	AuthenticateObject, // verifies the details of the object put up for auction
+	ReturnObjects 		// display all the objects
 );
 
 module.exports = router;

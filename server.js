@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 app.use("/join", require("./routes/join.js"));
 app.use("/profile", require("./routes/profile"));
-app.use("/feed", require("./routes/marketplace"));
+app.use("/feed", require("./routes/feed"));
 app.use("/feed", require("./routes/bidding"));
 // app.use('/admins', require('./routes/admins'));
 

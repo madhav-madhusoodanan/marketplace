@@ -5,17 +5,17 @@ const ObtainUser = require("../middleware/ObtainUser");
 // to edit profile
 router.post(
 	"/:name", 
-	AuthenticateUser, 
-	UpdateUser, 
-	ObtainUser
+	AuthenticateUser, 	// user autentication
+	UpdateUser, 		// allows user to edit his own details
+	ObtainUser 			// displays the user's data
 );
 
-// to get profile
-// remove AuthenticateUser if the accounts should be public on the internet
+	// to get profile
+	// remove AuthenticateUser if the accounts should be public on the internet
 router.get(
 	"/:name", 
-	AuthenticateUser, 
-	ObtainUser
+	AuthenticateUser, 	// user autentication
+	ObtainUser 			// displays the user's data
 );
 
 module.exports = router;
